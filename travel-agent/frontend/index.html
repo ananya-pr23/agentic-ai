@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelPilot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>✈️ TravelPilot</h1>
+
+        <p class="subtitle">
+            AI Travel Planning Agent
+        </p>
+
+        <form id="travelForm">
+
+            <label for="destination">Destination</label>
+            <input type="text" id="destination" placeholder="e.g. Goa, Tokyo, Paris" required>
+
+            <label for="days">Number of Days</label>
+            <input type="number" id="days" min="1" placeholder="e.g. 5" required>
+
+            <label for="budget">Total Budget (₹)</label>
+            <input type="number" id="budget" min="1" placeholder="e.g. 30000" required>
+
+            <label for="dailyBudget">Initial Daily Budget (₹)</label>
+            <input type="number" id="dailyBudget" min="1" placeholder="e.g. 8000" required>
+
+            <label for="interests">Interests</label>
+            <input type="text" id="interests" placeholder="e.g. food, culture and sightseeing" required>
+
+            <button type="submit">
+                Create Travel Plan ✈️
+            </button>
+
+        </form>
+
+        <div id="loading" class="hidden">
+            🤖 TravelPilot is planning your trip...
+        </div>
+
+        <div id="agentActivity" class="hidden">
+
+            <h2>🤖 Agent Activity</h2>
+
+            <div class="activity-step">
+                🎯 Understanding your travel goal
+            </div>
+
+            <div class="activity-step">
+                🧠 Creating an initial plan
+            </div>
+
+            <div class="activity-step">
+                🔧 Checking travel requirements
+            </div>
+
+            <div class="activity-step">
+                👀 Observing the results
+            </div>
+
+            <div id="replanningStep" class="activity-step hidden">
+                🔄 Re-planning because the budget was exceeded
+            </div>
+
+            <div class="activity-step">
+                ✅ Preparing final travel plan
+            </div>
+
+        </div>
+
+        <div id="result" class="hidden">
+
+            <h2>🎯 Travel Plan</h2>
+
+            <div id="resultContent"></div>
+            <div id="approvalSection" class="hidden">
+                <button id="approveButton" type="button">
+                    ✅ Approve Travel Plan
+                </button>
+
+                <div id="approvalMessage"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

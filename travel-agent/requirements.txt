@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+python-dotenv
+openai
+pydantic
+
+
+# fastapi → Backend API
+# uvicorn → Runs the backend server
+# python-dotenv → Reads our API key from .env
+# openai → Connects our agent to an LLM
+# pydantic → Validates data sent between frontend and backend
